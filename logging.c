@@ -37,6 +37,11 @@ static char* format(const struct event_t* event)
 	return NULL;
 }
 
+void setOutputFile(char* filename)
+{
+	strcpy(outputFile, filename);
+}
+
 struct event_t* createEvent(const long timestamp, const char* msg)
 {
 	struct event_t* event = (struct event_t*)calloc(1, sizeof(struct event_t));

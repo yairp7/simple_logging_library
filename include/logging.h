@@ -19,7 +19,8 @@ static void sysLog(const char* msg, const enum eResult result);
 static char* format(const struct event_t* event);
 
 static struct buffer_t* currentBuffer = NULL;
-
+static char outputFile[32];
+void setOutputFile(char* filename);
 void saveEvent(struct event_t* event);
 struct event_t* createEvent(const long timestamp, const char* msg);
 void flush();
